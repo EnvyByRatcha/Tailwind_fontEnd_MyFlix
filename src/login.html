@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=translate"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-zinc-950">
+    <div
+      style="
+        background-image: linear-gradient(rgb(0 0 0/60%), rgb(0 0 0/60%)),
+          url('https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg');
+      "
+      class="h-screen w-screen bg-cover flex flex-col items-center justify-center"
+    >
+      <div class="flex fixed top-0 w-full p-4 h-18 text-white">
+        <div class="flex items-center w-full md:px-40">
+          <a href="/" class="text-red-700 text-4xl font-bold">MYFLIX</a>
+        </div>
+      </div>
+
+      <div
+        class="bg-zinc-950/[0.8] mt-16 text-white w-[440px] mx-auto px-16 py-12 rounded-lg"
+      >
+        <h2 class="text-3xl font-semibold">Sign In</h2>
+        <div class="flex flex-col gap-4 mt-6">
+          <input
+            class="text-lg font-light px-4 py-4 bg-zinc-950/[0.5] rounded-md border border-gray-500 focus:outline focus:outline-2 focus:outline-white focus:border-transparent"
+            type="email"
+            placeholder="Email or mobile number"
+          />
+          <input
+            class="text-lg font-light px-4 py-4 bg-zinc-950/[0.5] rounded-md border border-gray-500 focus:outline focus:outline-2 focus:outline-white focus:border-transparent"
+            type="password"
+            placeholder="Password"
+          />
+          <button
+            class="bg-red-700 font-light hover:bg-red-700/[0.7] text-center py-2 rounded-lg"
+          >
+            Sign In
+          </button>
+          <h2 class="text-center font-light">OR</h2>
+          <button
+            class="bg-white/[0.2] hover:bg-white/[0.1] font-light py-2 rounded-lg"
+          >
+            Use a Sign-in Code
+          </button>
+          <a class="text-center hover:text-white/[0.7]" href="#"
+            >Forgot password?</a
+          >
+          <div class="flex items-center">
+            <button
+              id="radio_btn"
+              class="w-4 h-4 mr-2 border bg-zinc-950 border-gray-500 hover:border-white text-xs text-zinc-950"
+            >
+              <i class="fa fa-check"></i></button
+            ><span>Remember me</span>
+          </div>
+          <div class="flex flex-row">
+            <p class="text-gray-400">New to Myflix?</p>
+            <span class="ml-2 hover:underline text-white"><a href="">Sign up now</a></span>
+          </div>
+          <div class="text-sm font-extralight text-gray-400">
+            This page is protected by Google reCAPTCHA to ensure you're not a
+            bot. <span class="text-blue-500 hover:underline"><a href="#">Learn more.</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const button = document.getElementById("radio_btn");
+      let radioBtn_isChecked = false;
+      button.addEventListener("click", () => {
+        radioBtn_isChecked = !radioBtn_isChecked;
+        if (radioBtn_isChecked) {
+          button.classList.remove("bg-zinc-950");
+          button.classList.add("bg-white");
+        } else {
+          button.classList.remove("bg-white");
+          button.classList.add("bg-zinc-950");
+        }
+      });
+    </script>
+  </body>
+</html>

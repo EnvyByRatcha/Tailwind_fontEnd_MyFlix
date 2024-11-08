@@ -31,14 +31,16 @@
         background-image: linear-gradient(rgb(0 0 0/60%), rgb(0 0 0/60%)),
           url('https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg');
       "
-      class="h-screen w-screen bg-cover flex items-center justify-center"
+      class="h-screen w-screen bg-cover flex flex-col items-center justify-center"
     >
       <div
         class="flex fixed top-0 bg-zinc-950/[0.7] w-full p-4 h-18 text-white"
       >
         <div class="flex justify-between w-full items-center">
-          <div class="text-red-700 text-4xl hidden sm:flex">MYFLIX</div>
-          <div class="text-red-700 text-4xl sm:hidden">MFix</div>
+          <div class="text-red-700 text-4xl hidden sm:flex font-bold">
+            MYFLIX
+          </div>
+          <div class="text-red-700 text-4xl sm:hidden font-bold">MFix</div>
           <div class="flex gap-4 text-[16px]">
             <div class="px-2 bg-zinc-950 rounded-full border-2">
               <i class="fa-solid fa-globe mr-2"></i>
@@ -47,12 +49,98 @@
                 <option value="">EN</option>
               </select>
             </div>
-            <button
-              class="bg-white text-black px-4 rounded-full hover:bg-white/[0.7]"
+            <a
+              href="/login"
+              class="bg-white text-black px-4 rounded-full hover:bg-white/[0.7] flex items-center"
             >
-              เข้าสู่ระบบ
-            </button>
+              Sign In
+            </a>
           </div>
+        </div>
+      </div>
+
+      <div class="flex flex-row gap-2">
+        <div
+          class="text-white relative h-56 w-72 border-gray-700 border rounded-xl pt-6 pb-2 px-4 bg-gradient-to-br from-blue-950 to-gray-950 hover:from-blue-900 hover:to-gray-950 transition-colors duration-300"
+        >
+          <h2 class="text-2xl">Mobile</h2>
+          <h2 class="text-white/[0.7]">480p</h2>
+          <p class="text-white/[0.7] mt-2 text-sm">
+            <i class="fa fa-check mr-2"></i>Fair video quality
+          </p>
+          <p class="text-white/[0.7] text-sm">
+            <i class="fa fa-check mr-2"></i>For tour phone or tablet
+          </p>
+          <h2 class="mt-6 text-xl text-white/[0.7] absolute bottom-4">
+            THB 99/mo
+          </h2>
+        </div>
+
+        <div
+          class="text-white relative h-56 w-72 border-gray-700 border rounded-xl pt-6 pb-2 px-4 bg-gradient-to-br from-blue-950 to-gray-950 hover:from-blue-900 hover:to-gray-950 transition-colors duration-300"
+        >
+          <h2 class="text-2xl">Basic</h2>
+          <h2 class="text-white/[0.7]">720p</h2>
+          <p class="text-white/[0.7] mt-2 text-sm">
+            <i class="fa fa-check mr-2"></i>Good video quality
+          </p>
+          <p class="text-white/[0.7] text-sm">
+            <i class="fa fa-check mr-2"></i>For tour phone, tablet, laptop and
+            TV
+          </p>
+          <h2 class="mt-6 text-xl text-white/[0.7] absolute bottom-4">
+            THB 169/mo
+          </h2>
+        </div>
+
+        <div
+          class="text-white relative h-56 w-72 border-gray-700 border rounded-xl pt-6 pb-2 px-4 bg-gradient-to-br from-purple-950 to-gray-950 hover:from-purple-900 hover:to-gray-950 transition-colors duration-300"
+        >
+          <h2 class="text-2xl">Standard</h2>
+          <h2 class="text-white/[0.7]">1080p</h2>
+          <p class="text-white/[0.7] mt-2 text-sm">
+            <i class="fa fa-check mr-2"></i>Great video quality
+          </p>
+          <p class="text-white/[0.7] text-sm">
+            <i class="fa fa-check mr-2"></i>For tour phone, tablet, laptop and
+            TV
+          </p>
+          <h2 class="mt-6 text-xl text-white/[0.7] absolute bottom-4">
+            THB 349/mo
+          </h2>
+        </div>
+
+        <div
+          class="text-white relative h-56 w-72 border-gray-700 border rounded-xl pt-6 pb-2 px-4 bg-gradient-to-br from-violet-950 to-gray-950 hover:from-violet-900 hover:to-gray-950 transition-colors duration-300"
+        >
+          <h2 class="text-2xl">Premium</h2>
+          <h2 class="text-white/[0.7] text-xl">4K + HDR</h2>
+          <p class="text-white/[0.7] mt-2 text-sm">
+            <i class="fa fa-check mr-2"></i>Fair video quality
+          </p>
+          <p class="text-white/[0.7] text-sm">
+            <i class="fa fa-check mr-2"></i>Immersive sound (spatial audio)
+          </p>
+          <p class="text-white/[0.7] text-sm">
+            <i class="fa fa-check mr-2"></i>For tour phone, tablet, laptop and
+            TV
+          </p>
+          <h2 class="mt-6 text-xl text-white/[0.7] absolute bottom-4">
+            THB 419/mo
+          </h2>
+        </div>
+      </div>
+
+      <div class="flex flex-row gap-4 mt-6">
+        <input
+          class="bg-zinc-800 w-[360px] text-white text-lg font-light py-2 pl-4 rounded-full"
+          type="email"
+          placeholder="Email Address"
+        />
+        <div
+          class="bg-red-700 hover:bg-red-700/[0.7] text-white text-xl flex items-center rounded-full px-4"
+        >
+          <button>Get Started</button>
         </div>
       </div>
     </div>

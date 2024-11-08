@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=translate"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+      integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-zinc-800">
+    <!--navbar Start-->
+
+    <div
+      class="bg-zinc-950 py-2 lg:py-4 px-4 md:px-8 lg:px-12 flex justify-between"
+    >
+      <div class="flex items-center gap-4 lg:gap-8">
+        <h2 class="text-red-700 text-2xl md:text-3xl lg:text-4xl font-bold">
+          MYFLIX
+        </h2>
+        <ul class="hidden text-white gap-4 text-xs md:flex lg:text-sm xl:gap-6">
+          <li class="hover:text-gray-400 transition-colors duration-300">
+            <a href="#">Home</a>
+          </li>
+          <li class="hover:text-gray-400 transition-colors duration-300">
+            <a href="#">TV Show</a>
+          </li>
+          <li class="hover:text-gray-400 transition-colors duration-300">
+            <a href="#">Movie</a>
+          </li>
+          <li class="hover:text-gray-400 transition-colors duration-300">
+            <a href="#">News & Trending</a>
+          </li>
+          <li class="hover:text-gray-400 transition-colors duration-300">
+            <a href="#">My List</a>
+          </li>
+        </ul>
+        <div class="flex md:hidden text-white text-sm">
+          menu<span><i class="fa-solid fa-caret-down ml-2"></i></span>
+        </div>
+      </div>
+      <div class="flex gap-4 text-white items-center">
+        <div>
+          <button class="text-xl">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="relative px-2 text-xl">
+          <button id="notificationBtn">
+            <i class="fa-regular fa-bell"></i>
+          </button>
+        </div>
+
+        <div class="flex items-center">
+          <img
+            class="object-cover w-8 rounded-md"
+            src="./img//iconuser.jpg"
+            alt=""
+          />
+          <span class="hidden md:flex"
+            ><i class="fa-solid fa-caret-down ml-2"></i
+          ></span>
+        </div>
+      </div>
+    </div>
+
+    <!--navbar End-->
+
+    <!--Header Start-->
+
+    <div class="w-screen relative">
+      <video src="./video/video.mp4" muted loop autoplay></video>
+      <div
+        class="absolute top-8 left-4 md:top-12 md:left-8 lg:left-12 flex flex-col gap-2"
+      >
+        <img
+          class="object-cover w-60 md:w-72 lg:w-3/4"
+          src="./img/image2.webp"
+          alt=""
+        />
+        <h2 class="text-sm text-white lg:text-lg">New episode on Friday</h2>
+        <div class="w-1/2 text-[10px] font-light text-white lg:text-sm">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+          cum, laborum error magni rem.
+        </div>
+        <div class="flex gap-4 text-black">
+          <button
+            class="bg-white font-light hover:bg-white/[0.7] py-1 px-2 text-xs md:text-sm lg:px-4 lg:py-2 rounded-md"
+          >
+            <i class="fa-solid fa-play mr-1 lg:mr-2"></i>Play
+          </button>
+          <button
+            class="bg-gray-600 font-light hover:bg-gray-600/[0.7] py-1 px-2 text-xs md:text-sm lg:px-4 lg:py-2 rounded-md text-white"
+          >
+            <i class="fa-regular fa-circle-question mr-2 lg:mr-2"></i>More
+            Detail
+          </button>
+        </div>
+      </div>
+      <div
+        class="absolute right-0 top-2/4 text-white w-8 md:w-10 lg:w-12 bg-gray-900/[0.7] text-xs lg:text-sm pl-2 border-l-4"
+      >
+        16+
+      </div>
+    </div>
+
+    <!--Header End-->
+
+    <!--Content Start-->
+
+    <div class="w-screen relative pl-4 md:pl-8 lg:pl-12">
+      <div class="owl-carousel">
+        <div>Your Content</div>
+        <div>Your Content</div>
+        <div>Your Content</div>
+        <div>Your Content</div>
+        <div>Your Content</div>
+        <div>Your Content</div>
+        <div>Your Content</div>
+      </div>
+    </div>
+
+    <!--Content End-->
+
+    <script></script>
+  </body>
+</html>
