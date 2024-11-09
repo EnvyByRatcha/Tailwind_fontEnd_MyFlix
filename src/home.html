@@ -26,20 +26,33 @@
     />
 
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
-      integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
-  <body class="bg-zinc-800">
+  <body class="bg-zinc-800 relative">
     <!--navbar Start-->
 
     <div
@@ -139,20 +152,86 @@
 
     <!--Content Start-->
 
-    <div class="w-screen relative pl-4 md:pl-8 lg:pl-12">
-      <div class="owl-carousel">
-        <div>Your Content</div>
-        <div>Your Content</div>
-        <div>Your Content</div>
-        <div>Your Content</div>
-        <div>Your Content</div>
-        <div>Your Content</div>
-        <div>Your Content</div>
-      </div>
+    <div
+      class="w-screen absolute top-[320px] md:top-[400px] lg:top-[520px] pl-4 md:pl-8 lg:pl-12 text-white"
+    >
+      <p class="text-xl mb-2">Korea Series</p>
+      <div class="owl-carousel owl-theme" id="koreaSeries"></div>
     </div>
 
     <!--Content End-->
 
-    <script></script>
+    <script>
+      const koreaSeriesContainer = document.getElementById("koreaSeries");
+
+      const imgKorea = [
+        "img1.jpeg",
+        "img2.jpeg",
+        "img3.jpeg",
+        "img4.webp",
+        "img5.jpeg",
+        "img6.jpeg",
+        "img7.webp",
+      ];
+
+      imgKorea.forEach((item) => {
+        const detail = `<div class="item">
+          <div class="bg-zinc-950 rounded-lg">
+            <img
+              class="rounded-t-lg"
+              src="./img/movie/korean/${item}"
+              alt=""
+            />
+            <div class="px-2 py-2 flex flex-col gap-1">
+              <div class="flex justify-between">
+                <div class="flex gap-2 items-center">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <i class="fa-solid fa-plus"></i>
+                  <i class="fa-regular fa-thumbs-up"></i>
+                </div>
+                <div>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+              </div>
+
+              <div class="flex gap-2 items-center font-light">
+                <div class="border px-2 text-sm">16+</div>
+                <div class="text-xs lg:text-sm">12 Episode</div>
+                <div class="border text-xs h-fit px-0.5">HD</div>
+              </div>
+
+              <div class="flex items-center text-[12px] hidden lg:flex lg:text-sm font-light">
+                Action<i class="fa-solid fa-circle text-[4px] mx-2 pt-1"></i
+                >Romantic<i
+                  class="fa-solid fa-circle text-[4px] mx-2 pt-0.5"
+                ></i
+                >Drama
+              </div>
+            </div>
+          </div>
+        </div>`;
+
+        koreaSeriesContainer.innerHTML += detail;
+      });
+
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 4,
+        nav: true,
+        dots: false,
+        nav: false,
+        responsive: {
+          0: {
+            items: 3,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 5,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
